@@ -6,12 +6,10 @@ export default function App() {
   const [wish, setWish] = useState([]);
 
   useEffect(() => {
-    console.log(`getting`);
     setWish(JSON.parse(localStorage.getItem("wish")));
   }, []);
 
   useEffect(() => {
-    console.log(`setting`);
     localStorage.setItem("wish", JSON.stringify(wish));
   }, [wish]);
 
